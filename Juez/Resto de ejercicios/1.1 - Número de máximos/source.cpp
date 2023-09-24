@@ -15,48 +15,48 @@ using namespace std;
 void resuelveCaso() {
     int n;
     int grande;
-    int contador = 1;
+    int contador = 0;
 
     // leer los datos de la entrada
     cin >> n;
     grande = n;
-    
+
     while (n != 0) {
         //cout << n << " ";
-        cin >> n;
-        if (n == grande) {
-            contador++;
-        }else if (n > grande) {
+        if (n > grande) {
             grande = n;
-            contador=1;
+            contador = 1;
         }
-        cin >> n;
-    }    
+        else if (n == grande) {
+            contador++;
+        }
+        cin >> n; //IMPORTANTE ESTA ENTRADA AQUÍ
+    }
     //TipoSolucion sol = resolver(datos);
     // escribir sol
-    cout << grande << " " << contador <<"\n";
+    cout << grande << " " << contador << "\n";
 }
 
 int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
-    #ifndef DOMJUDGE
-     std::ifstream in("datos.txt");
-     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
-     #endif 
-    
-    
+#ifndef DOMJUDGE
+    std::ifstream in("datos1.1.txt");
+    auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
+#endif 
+
+
     int numCasos;
     std::cin >> numCasos;
     for (int i = 0; i < numCasos; ++i)
         resuelveCaso();
 
-    
+
     // Para restablecer entrada. Comentar para acepta el reto
-     #ifndef DOMJUDGE // para dejar todo como estaba al principio
-     std::cin.rdbuf(cinbuf);
-     system("PAUSE");
-     #endif
-    
+#ifndef DOMJUDGE // para dejar todo como estaba al principio
+    std::cin.rdbuf(cinbuf);
+    system("PAUSE");
+#endif
+
     return 0;
 }
