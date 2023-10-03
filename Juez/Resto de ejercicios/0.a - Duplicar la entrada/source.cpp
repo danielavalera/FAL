@@ -1,5 +1,6 @@
-// Daniela Valentina Valera Fuentes
-// F94
+// Daniela Valentina Valera Fuentes (F94)
+// 
+//Programa que duplica enteros
 
 
 #include <iostream>
@@ -15,7 +16,6 @@ using namespace std;
 void resuelveCaso() {
     // leer los datos de la entrada
     int n;
-
     cin >> n;
     
     // escribir sol

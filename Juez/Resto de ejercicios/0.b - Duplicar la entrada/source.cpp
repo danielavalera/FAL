@@ -1,5 +1,9 @@
-// Daniela Valentina Valera Fuentes
-// F94
+// Daniela Valentina Valera Fuentes (F94)
+// 
+//Programa que duplica la entrada de números enteros,
+//la diferencia con 0.a es que el fin del programa 
+//lo marca un 0, por lo que la plantilla es diferente (Centinela).
+//Tampoco tiene coste, igual que 0.a.
 
 
 #include <iostream>
@@ -17,9 +21,9 @@ bool resuelveCaso() {
     // leer los datos de la entrada
     int n;
     cin >> n;
-
     if (n == 0)
         return false;
+
 
     // escribir sol
     cout << n * 2 << '\n';

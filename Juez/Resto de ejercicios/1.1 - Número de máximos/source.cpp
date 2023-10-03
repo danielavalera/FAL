@@ -1,5 +1,10 @@
-// Daniela Valentina Valera Fuentes
-// F94
+/*
+* Daniela Valentina Valera Fuentes(F94)
+Creo una variable maximo donde clono el valor de n fuera del bucle, para una primera comprobación.
+El bucle compara maximo con el siguiente valor de cin, si es el mismo valor aumenta el contador con el numero de veces
+que se repite esa puntuación, si es menor actualiza su valor y resetea el contador.
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -9,32 +14,25 @@ using namespace std;
 //TipoSolucion resolver(TipoDatos datos) {}
 
 // Resuelve un caso de prueba, leyendo de la entrada la configuración, y escribiendo la respuesta
-//--> El contador se inicializa a 1 para que en el segundo caso y tercero salga bien.
-//--> La comprobación de igual va antes de la de mayor porque sino el contador no se hace bien
-//--> El contador es =1 en la comprobación de mayor para que cuando haya un maximo que supere al otro se reinicie el contador
 void resuelveCaso() {
-    int n;
-    int grande;
+    int n, maximo;
     int contador = 0;
-
     // leer los datos de la entrada
     cin >> n;
-    grande = n;
+    maximo = n;
 
     while (n != 0) {
-        //cout << n << " ";
-        if (n > grande) {
-            grande = n;
-            contador = 1;
-        }
-        else if (n == grande) {
+        if (n == maximo) {
             contador++;
-        }
+        }else if (n > maximo) {
+            maximo = n;
+            contador = 1;
+        }//sino, paso al siguiente valor
         cin >> n; //IMPORTANTE ESTA ENTRADA AQUÍ
     }
     //TipoSolucion sol = resolver(datos);
     // escribir sol
-    cout << grande << " " << contador << "\n";
+    cout << maximo << " " << contador << "\n";
 }
 
 int main() {
