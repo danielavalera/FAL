@@ -9,7 +9,18 @@
 using namespace std;
 
 // función que resuelve el problema
-//TipoSolucion resolver(TipoDatos datos) {}
+string resolver(vector<string> p) {
+    string primeraPalabraEnOrden = p[0];
+
+    for (int i = 1; i < p.size(); i++)
+    {
+        if (p[i] < primeraPalabraEnOrden) {
+            primeraPalabraEnOrden = p[i];
+        }
+    }
+
+    return primeraPalabraEnOrden;
+}
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
@@ -26,19 +37,10 @@ void resuelveCaso() {
         p.push_back(palabra);
     }
 
-    string primeraPalabraEnOrden = p[0];
+    string sol = resolver(p);
 
-    for (int i = 0; i < p.size(); i++)
-    {
-        if (p[i] < primeraPalabraEnOrden) {
-            primeraPalabraEnOrden = p[i];
-        }
-    }
-
-    //TipoSolucion sol = resolver(datos);
     // escribir sol
-
-    cout << primeraPalabraEnOrden << endl;
+    cout << sol << endl;
 
 }
 
