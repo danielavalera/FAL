@@ -1,5 +1,5 @@
-// Nombre del alumno .....
-// Usuario del Juez ......
+// Daniela Valentina Valera Fuentes
+// F94
 
 
 #include <iostream>
@@ -9,9 +9,39 @@
 using namespace std;
 
 // función que resuelve el problema
-TipoSolucion resolver(TipoDatos datos) {
+bool resolver(int minBeneficio, vector<int> v) {
+    int sumaMax = 0;
+    int suma = 0;
+    int iniInterv = 0;
+    int iniIntervAux = 0;
+    int finInterv = 0;
 
 
+    for (int i = 0; i < v.size(); i++) {
+        suma += v[i];
+
+        if (suma >= minBeneficio) {
+            if (suma > sumaMax) {
+                sumaMax = suma;
+                iniInterv = iniIntervAux;
+                finInterv = i;
+            }
+        }
+
+        if (suma < 0) { // resetear
+            suma = 0;
+            iniIntervAux = i + 1;
+        }
+    }
+
+    if (sumaMax < minBeneficio) {
+        cout << "NO COMPENSA" << '\n';
+    }
+    else {
+        cout << sumaMax << " " << iniInterv << " " << finInterv << '\n';
+    }
+
+    return true;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -28,11 +58,9 @@ void resuelveCaso() {
         cin >> n;
         v.push_back(n);
     }
-
-
-    TipoSolucion sol = resolver(datos);
+    
+    bool sol = resolver(minBeneficio, v);
     // escribir sol
-
 
 }
 
