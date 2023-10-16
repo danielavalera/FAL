@@ -9,7 +9,20 @@
 using namespace std;
 
 // función que resuelve el problema
-//TipoSolucion resolver(TipoDatos datos) {}
+bool resolver(vector<int>& v) {
+    int minElem = v[0];
+
+    for (int i = 1; i < v.size(); i++)
+    {
+        if (v[i] < minElem) {
+            minElem = v[i];
+        }
+
+        
+    }
+
+    return true; // es minimalista
+}
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
@@ -28,19 +41,13 @@ bool resuelveCaso() {
         v.push_back(elementos);
     }
 
-    for (int i = 0; i < v.size(); i++)
-    {
-        for (int j = 0; j <= j+1; j++)
-        {
-            
-        }
-    }
-    
-
-    //TipoSolucion sol = resolver(datos);
-
     // escribir sol
-
+    if (resolver(v)) {
+        cout << "SI" << endl;
+    }
+    else {
+        cout << "NO" << endl;
+    }
     return true;
 
 }
@@ -49,7 +56,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("datos.txt");
+    std::ifstream in("datos2.3.txt");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif 
 
