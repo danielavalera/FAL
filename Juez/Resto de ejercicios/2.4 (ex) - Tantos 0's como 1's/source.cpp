@@ -1,5 +1,5 @@
-// Nombre del alumno .....
-// Usuario del Juez ......
+// Daniela Valentina Valera Fuentes
+// F94
 
 
 #include <iostream>
@@ -9,9 +9,25 @@
 using namespace std;
 
 // función que resuelve el problema
-TipoSolucion resolver(TipoDatos datos) {
+int resolver(vector<int>& v, int l) {
+    int c = 0, u = 0; //nº de ceros y unos
+    int nInter = 1; //nº intervalos. Inicialmente hay 1.
 
+    for (int i = l; i < v.size(); i++) //empiezas en l xq dice que en el 1er intervalo no hay 0's ni 1's
+    {
+        if (v[i] == 0)
+            ++c;
+        if (v[i] == 1)
+            ++u;
+        if (v[i-l] == 0)
+            --c;
+        if (v[i-l] == 1)
+            --u;
+        if (c == u) // si en el mismo nº, contamos un intervalo más
+            ++nInter;
+    }
 
+    return nInter;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -28,10 +44,10 @@ void resuelveCaso() {
         v.push_back(n);
     }
 
-    TipoSolucion sol = resolver(datos);
+    int sol = resolver(v, secuencia);
     // escribir sol
 
-
+    cout << sol << '\n';
 }
 
 int main() {

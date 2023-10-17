@@ -10,11 +10,7 @@ using namespace std;
 
 // función que resuelve el problema
 bool resolver(int minBeneficio, vector<int> v) {
-    int sumaMax = 0;
-    int suma = 0;
-    int iniInterv = 0;
-    int iniIntervAux = 0;
-    int finInterv = 0;
+    int sumaMax = 0, suma = 0, iniInterv = 0, iniIntervAux, finInterv = 0;
 
 
     for (int i = 0; i < v.size(); i++) {

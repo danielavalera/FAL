@@ -8,6 +8,7 @@
 #include <vector>
 using namespace std;
 
+
 // función que resuelve el problema
 bool resolver(vector<int>& v) {
     int minElem = v[0];
@@ -17,10 +18,9 @@ bool resolver(vector<int>& v) {
         if (v[i] < minElem) {
             minElem = v[i];
         }
-
-        
+        else if (v[i] == minElem)
+            return false; // no es minimalista
     }
-
     return true; // es minimalista
 }
 
@@ -34,7 +34,6 @@ bool resuelveCaso() {
         return false;
 
     vector<int> v;
-    int count = 0;
     for (int i = 0; i < nSec; i++)
     {
         cin >> elementos;
@@ -43,10 +42,10 @@ bool resuelveCaso() {
 
     // escribir sol
     if (resolver(v)) {
-        cout << "SI" << endl;
+        cout << "SI" << '\n';
     }
     else {
-        cout << "NO" << endl;
+        cout << "NO" << '\n';
     }
     return true;
 
@@ -56,7 +55,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("datos2.3.txt");
+    std::ifstream in("datos2.2.txt");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif 
 

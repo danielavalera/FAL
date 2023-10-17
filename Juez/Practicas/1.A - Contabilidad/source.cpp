@@ -26,7 +26,7 @@ bool resuelveCaso() {
     }
 
     //TipoSolucion sol = resolver(datos);
-
+//empiezas la suma desde la posición final del vector
     // escribir sol
 
     return true;
