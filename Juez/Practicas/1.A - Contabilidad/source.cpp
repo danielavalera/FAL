@@ -9,7 +9,17 @@
 using namespace std;
 
 // función que resuelve el problema
-//TipoSolucion resolver(TipoDatos datos) {}
+bool resolver(vector<int> v) {
+    int suma = 0;
+    for (int i = v.size()-1; i >= 0; i--) //empiezas la suma desde la posición final del vector
+    {
+        if (v[i] == suma)
+            return true;
+        suma += v[i];
+    }
+
+    return false;
+}
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
@@ -25,9 +35,10 @@ bool resuelveCaso() {
         cin >> v[i];
     }
 
-    //TipoSolucion sol = resolver(datos);
-//empiezas la suma desde la posición final del vector
+    bool sol = resolver(v);
     // escribir sol
+    if (sol) cout << "YES" << '\n';
+    else cout << "NO" << '\n';
 
     return true;
 
