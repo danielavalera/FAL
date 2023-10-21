@@ -41,7 +41,7 @@ Sol resolver(vector<int> const & v) {
         ++l;
 
         if (suma > 0) {
-            if (suma > sumaMax || (suma == sumaMax && l < lMax)) {
+            if (suma > sumaMax || (suma == sumaMax && l < lMax)) { //solo se queda con la nueva longitud si es mayor
                 sumaMax = suma;
                 iniInterMax = iniInter;
                 lMax = l;
