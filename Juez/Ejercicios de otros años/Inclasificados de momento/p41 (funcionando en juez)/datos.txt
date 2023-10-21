@@ -1,0 +1,11 @@
+5
+6 3 d 1 z 1
+r d z e d z
+7 3 e 2 j 1
+e j e r e e j
+5 2 r 1 z 0
+d z j r e
+7 4 z 2 r 1
+z r d z z r e
+95 17 r 8 z 6
+r r z r z z d z r r r d z r r z z z r d z z r d r r r r z d r d d r d d d z r r r z d r d d r d z r r r r r r z r d d d z r z d z d d z d r z r d r d z z d z d r d r d z z r r z z d d r z z
