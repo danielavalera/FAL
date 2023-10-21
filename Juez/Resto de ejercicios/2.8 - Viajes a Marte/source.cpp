@@ -1,6 +1,13 @@
 // Daniela Valentina Valera Fuentes
 // F94
+//está bien hecho pero no es lo que pide, pide un algoritmo de partición.
 
+
+/*
+N = v.size();
+P: 0 <= N <= 150.000 ^ altura > 0 ^ v=V
+^ para todo k: 0 <= k < N: v[k] = 
+*/
 
 #include <iostream>
 #include <iomanip>

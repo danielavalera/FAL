@@ -2,6 +2,20 @@
 // F94
 
 
+
+/*
+Aclaraciones: v = vector
+    P:{v.size() > 0 ^ para todo i: 0 < v[i] < 10^6}
+    int resolver(vector<int> &v) dev contParejas
+    Q:{}
+    I:{
+        0 <= i <= v.size() ^
+        0 <= contParejas <= depende del #impares ^
+        0 <= imparesEncontrados <= i ^
+        
+    }
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
